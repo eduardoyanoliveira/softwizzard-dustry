@@ -22,8 +22,11 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
+from django.views.generic import TemplateView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', TemplateView.as_view(template_name='index.html')),
     path('api/', include('dustry_api.urls', namespace='dustry_api')),
     path('api/reports/', include('reports.urls', namespace='reports')),
     path('api/users/', include('users.urls', namespace='users')),
@@ -33,3 +36,4 @@ urlpatterns = [
 ]
 
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
