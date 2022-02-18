@@ -1,0 +1,57 @@
+
+.skill{
+    width: 135px;
+    height: 135px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.outer{
+    /* height: 135px;
+    width: 135px; */
+    height: 80px;
+width: 85px;
+    border-radius: 50%;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    padding: 25px;
+
+}
+
+.skill:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    cursor: pointer;
+}
+
+.inner{
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#number{
+    font-weight: 500;
+}
+
+.skill circle{
+    fill: none;
+    stroke: #2adf7b;
+    stroke-width: 23px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim 1.5s linear forwards;
+}
+
+.skill svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes anim {
+    100%{
+        stroke-dashoffset: 265;
+    }
+} 

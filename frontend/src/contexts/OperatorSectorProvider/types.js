@@ -1,0 +1,15 @@
+export const CLEAN_STATE = 'CLEAN_STATE';
+
+export const LIST_REQUEST = 'LIST_REQUEST';
+export const LIST_SUCCESS = 'LIST_SUCCESS';
+export const LIST_FAIL = 'LIST_FAIL';
+
+export const RETRIVE_REQUEST = 'RETRIVE_REQUEST';
+export const RETRIVE_SUCCESS = 'RETRIVE_SUCCESS'; 
+
+export const CREATE_SUCCESS = 'CREATE_SUCCESS';
+export const CREATE_FAIL = 'CREATE_FAIL';
+
+export const DELETE_SUCCESS = 'UPDATE_SUCCESS';
+export const DELETE_FAIL = 'UPDATE_FAIL';
+
