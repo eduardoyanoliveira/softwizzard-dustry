@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from django.db.models import Sum
 
 class WithdrawalsPerDay(APIView):
-    
+
     def get(self, request, format=None):
         params = request.query_params
         orders = []
@@ -32,7 +32,7 @@ class WithdrawalsPerDay(APIView):
             orders = ProductionOrder.objects.all()
         else:
             orders = ProductionOrder.objects.filter(productionorderoperator__operator_id=operator)
-        
+
         order_ids = [order.id for order in orders]
         withdrawals = ProductionOrderWithdraw.objects.filter(order_id__in=order_ids)
         query = withdrawals.filter(time__range=[initial_date, final_date])
@@ -45,8 +45,9 @@ class WithdrawalsPerDay(APIView):
         for item in list:
             dataset_list.append(
                 {
-                    'date': item['date'].replace('-', '/') + ' 00:00:00',
+                    'date': str(item['date']).replace('-', '/') + ' 00:00:00',
                     'total': item['total']
                 }
             )
+
         return Response(dataset_list)

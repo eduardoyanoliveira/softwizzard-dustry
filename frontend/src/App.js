@@ -36,12 +36,12 @@ function App() {
     <ThemeProvider>
       <DimensionsProvider>
       {
-        // now > security ? (
-        //   <div style={{fontSize: '2.5rem', margin: '0 auto', textAlign:'center'}}>
-        //     Licensa fora da data de Válidade
-        //   </div>
-        // )
-        // :
+        now > security ? (
+          <div style={{fontSize: '2.5rem', margin: '250px auto', textAlign:'center'}}>
+            Licença fora da data de Válidade
+          </div>
+        )
+        :
         !localStorage.getItem('access_token') 
         ? 
         (

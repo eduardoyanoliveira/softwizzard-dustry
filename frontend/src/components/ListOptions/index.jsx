@@ -98,6 +98,7 @@ function ListOptionsComponent(
                                 value={searchValue}
                                 handleChangeFather={handleChange}
                                 captureValue={captureValue}
+                                background={'background'}
                             />
                     </SearchContainer>
                 )

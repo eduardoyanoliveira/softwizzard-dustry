@@ -17,7 +17,7 @@ export const Container = styled.header`
 export const MenuBarsContainer = styled.div`
     ${({showBars}) => css`
         display: ${showBars ? 'flex' : 'none' };
-        font-size: 1.4rem;
+        font-size: 1.7rem;
         cursor: pointer;
     `}
 `;

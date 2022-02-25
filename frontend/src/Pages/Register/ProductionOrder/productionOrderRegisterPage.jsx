@@ -698,7 +698,6 @@ function ProductionOrderRegisterPage({searchCols, withdrawCols}) {
                                 inputType={'number'}
                                 name={'end_hour_meter'}
                                 handleChange={handleChange}
-                                disabled={disabled}
                             />
                         </Container>
                     </HeaderRow>
@@ -761,7 +760,7 @@ function ProductionOrderRegisterPage({searchCols, withdrawCols}) {
                             <ButtonContainer selected={!!!selected}>
                                 {
                                     // If a operator has been  selected, shows the finish option
-                                    selected && (
+                                    (selected && !disabled) && (
                                         <>
                                             <GenericButton  
                                                 maxwidth={'100%'}

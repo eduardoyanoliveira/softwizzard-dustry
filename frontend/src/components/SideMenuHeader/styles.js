@@ -17,7 +17,7 @@ export const Bars = styled.div`
     ${({theme}) => css`
         color: ${theme.colors.primary};
     `}
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     cursor: pointer;
 `;
 
@@ -28,7 +28,7 @@ export const ThemeSwitcher = styled.div`
     ${({theme}) => css`
         color: ${theme.colors.fontDisabled};
     `}
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     cursor: pointer;
 `;
 

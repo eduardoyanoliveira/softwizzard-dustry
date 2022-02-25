@@ -22,6 +22,7 @@ function AutoComplete({
   value = '',
   validMsg,
   maxWidth = '520px',
+  background = 'background',
   pro = false,
   checkbox = false
 }) {
@@ -90,6 +91,7 @@ function AutoComplete({
           maxWidth={maxWidth}
           placeholder={placeholder}
           disabled={disabled}
+          background={background}
         />
         <DataContainer
           // if the input has a value and the "open" varible is true , opens the dropdown
